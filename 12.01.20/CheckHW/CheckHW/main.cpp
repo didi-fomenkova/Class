@@ -18,8 +18,6 @@ void task13();
 void task14();
 void task15();
 
-
-// task1:Дано целое число, если оно является положительным, то прибавить к нему 1, иначе не изменять
 // task2:Дано целое число, если оно является положительным, то прибавить к нему 1, если отрицательным-вычесть из него 2, если оно равно 0- заменить на 10
 // task3:Даны три целых числа, найти количество положительных чисел в исходном наборе
 // task5:Даны два числа, вывести порядковый номер меньшего из них
@@ -35,27 +33,16 @@ void task15();
 int main()
 {
 	task1();
-	task2();
-	task3();
-	task4();
-	task5();
-    task6();
-    task7();
-    task8();
-    task9();
-   task10();
-   task11();
-   task12();
-   task13();
-   task14();
-   task15();
   
-   cout << "End";
+    cout << "End";
 
+	system("pause");
 	return 0;
 }
-void task1(){
-	int number;
+
+// task1:Дано целое число, если оно является положительным, то прибавить к нему 1, иначе не изменять
+void task1() {
+	int number = 0;
 	cout << "Insert the number" << endl;
 	cin >> number;
 	if (number > 0){
@@ -63,51 +50,56 @@ void task1(){
 	}
 	cout << "The resulting number is " << number << endl;
 }
-void task2(){
-	int number0;
+
+void task2() {
+	int number = 0;
 	cout << "Insert the number" << endl;
-	cin >> number0;
-	if(number0 > 0){
-		number0++;
+	cin >> number;
+	if (number > 0){
+		number++;
 	}
-	else if(number0 < 0){
-		number0-=2;
+	else if (number < 0){
+		number -= 2;
 	}
-	else if(number0 == 0){
-		number0 =10;
+	else if (number == 0){
+		number = 10;
 	}
-	cout << "The resulting number is " << number0 << endl;
+	cout << "The resulting number is " << number << endl;
 }
-void task3(){
-	int number1, number2, number3;
-	int s=0;
-	int p=0;
-	int n=0;
+
+void task3() {
+	int number1 = 0;
+	int number2 = 0;
+	int number3 = 0;
+	int countPositive = 0;
 	cout << "Enter three numbers" << endl;
 	cin >> number1 >> number2 >> number3;
-	if(number1 > 0){
-		s++;
+	if (number1 > 0) {
+		countPositive++;
 	}
-	if(number2 > 0){
-		p++;
+	if (number2 > 0) {
+		countPositive++;
 	}
-	if(number3 > 0){
-		n++;
+	if (number3 > 0) {
+		countPositive++;
 	}
-	int positive=s+p+n;
-	cout << "The number of positive numbers in the set is " << positive << endl;
+
+	cout << "The number of positive numbers in the set is " << countPositive << endl;
 }
+
 void task5(){
-	int number1, number2;
+	int number1 = 0;
+	int number2 = 0;
 	cout << "Enter two numbers" << endl;
 	cin >> number1 >> number2;
-	if(number1 < number2){
+	if (number1 < number2) {
 		cout << " Sequence number is first" << endl;;
 	}
-	else{
+	else {
 		cout << "Sequence number is second " << endl;;
 	}
 }
+
 void task7(){
 	double A, B;
 	cout << "Enter A and B " << endl;
@@ -118,6 +110,7 @@ void task7(){
 	}
 	cout << " A is " << A << " and B is " << B << endl;
 }
+
 void task8(){
 	int A,B;
 	cout << "Enter A and B " << endl;
@@ -133,6 +126,7 @@ void task8(){
 	}
 	cout << " A is " << A << " and B is " << B << endl;
 }
+
 void task9(){
 	int A,B;
 	cout << "Enter A and B " << endl;
@@ -151,6 +145,7 @@ void task9(){
 	}
 	cout << " AS is " << A << " and B is " << B << endl;
 }
+
 void task6(){
 	int number1, number2;
 	cout << "Enter two numbers" << endl;
@@ -164,6 +159,7 @@ void task6(){
 		cout << "Lower number is " << number1 << endl;
 	}
 }
+
 void task10(){
 	int number1, number2, number3,max;
 	cout << "Enter three numbers" << endl;
@@ -177,6 +173,7 @@ void task10(){
 	}
 	cout << " Maximum is " << max << endl;
 }
+
 void task11() {
 	int number1, number2, number3;
 	cout << "Enter three numbers" << endl;
@@ -205,6 +202,7 @@ void task11() {
 		cout << " Average is "<< number3 << endl;
 	}
 }
+
 void task12(){
 	int number1, number2, number3, sum;
 	cout << "Enter three numbers" << endl;
@@ -220,6 +218,7 @@ void task12(){
 	}
 	cout << " The amount is " << sum << endl;
 }
+
  void task13() {
 	double A, B, C;
 	cout << "Enter A, B and C " << endl;
@@ -236,11 +235,12 @@ void task12(){
 	}
 	cout  << " A is " << A << "; B is " << B << " and C is " << C << endl;
 }
+
  void task14(){
 	 double a, b, c;
 	 cout << "Enter A, B and C " << endl;
 	 cin >> a >> b >> c;
-	 if( ( (a > b) && (b > c) ) || ( (a < b) && (b < c) ) ){
+	 if(((a > b) && (b > c)) || ( (a < b) && (b < c) ) ){
 		a *= 2;
 		b *= 2;
 		c *= 2;
@@ -252,11 +252,12 @@ void task12(){
 	}
 	cout  << " A is " << a << "; B is " << b << "  and C is " << c << endl;
  }
+
  void task15() {
 	 int number1, number2, number3;
 	 cout << "Enter three numbers, one of which is different from other two, equal to each otrer" << endl;
 	 cin >> number1 >> number2 >> number3;
-	 if ( (number1 != number2) && (number1 != number3) ){
+	 if ((number1 != number2) && (number1 != number3)){
 		 cout << " Sequence number is first " << endl;
 	 }
 	 else if ( (number2 != number3) && (number2 != number1) ){
@@ -266,8 +267,11 @@ void task12(){
 		 cout << "Sequence number is third " << endl;
 	 }
  }
+
  void task4(){
 	 int number1, number2, number3, pos, neg;
+	 pos = 0;
+	 neg = 0;
 	 cout << "Enter three numbers" << endl;
 	 cin >> number1 >> number2 >> number3;
 	 if( number1 > 0){
@@ -279,14 +283,15 @@ void task12(){
 			 pos++;
 		 }
 	 }
-	 else if( number1 < 0){
+	 else if (number1 < 0) {
 		 neg++;
-		 if( number2 < 0){
+		 if (number2 < 0) {
 			 neg++;
 		 }
-		 if( number3 < 0){
+		 if (number3 < 0) {
 			 neg++;
 		 }
+	 }
 		 cout << " Number of positive is "  << pos << endl;
-		 cout << " Number of negative is " << neg << endl;s
+		 cout << " Number of negative is " << neg << endl;
  }
